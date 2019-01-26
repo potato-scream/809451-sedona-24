@@ -25,7 +25,35 @@
         <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
 
         <section class="catalog-search">
-            <!-- Форма поиска и фильтров  class="search-filters"-->
+            <!-- Фильтры поиска -->
+            <form action="#" method="GET" class="search-filters" name="filters">
+                <fieldset class="filter-infrastructure">
+                    <legend class="filter-infrastructure-title">Инфраструктура:</legend>
+                    <input id="pool-checkbox" type="checkbox" checked name="pool">
+                    <label for="pool-checkbox">Бассейн</label>
+                    <input id="parking-checkbox" type="checkbox" name="parking">
+                    <label for="parking-checkbox">Парковка</label>
+                    <input id="wifi-checkbox" type="checkbox"  name="wi-fi">
+                    <label for="wifi-checkbox">Wi-fi</label>
+                </fieldset>
+                
+                <fieldset class="filter-accommodation">
+                    <legend class="filter-accommodation-title">Тип жилья:</legend>
+                    <input id="hotel-checkbox" type="checkbox" checked name="hotel">
+                    <label for="hotel-checkbox">Отель</label>
+                    <input id="motel-checkbox" type="checkbox" checked name="motel">
+                    <label for="motel-checkbox">Мотель</label>
+                    <input id="apartments-checkbox" type="checkbox" checked name="apartments">
+                    <label for="apartments-checkbox">Апартаменты</label> 
+                </fieldset>
+                <!-- Тут будет рейндж по стоимости в сутки -->
+            </form>
+            
+            <section class="search-sort">
+                <!-- Тут будет сортировка по цене etc. -->
+            </section>
+
+
             <h2 class="visually-hidden">Результаты поиска</h2>
             <ul class="search-results">
                 <li class="search-results-item">
