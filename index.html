@@ -93,31 +93,29 @@
 
       <!-- Форма поиска гистиницы -->
       <form class="search-form" action="#" method="GET" name="search">
-        <fieldset>
-          <p>
-            <label for="check-in-date">Дата заезда:</label>
-            <input id="check-in-date" type="date" value="2017-04-24">
-            <span class="calendar-icon"></span>
-          </p>
-          <p>
-            <label for="check-out-date">Дата выезда:</label>
-            <input id="check-out-date" type="date" value="2017-06-04">
-            <span class="calendar-icon"></span>
-          </p>
-          <p>
-            <label for="adults">Взрослые:</label>
-            <button type="button">-</button>
-            <input id="adults" type="number" value="2">
-            <button type="button">+</button> 
-          </p>
-          <p>
-            <label for="kids">Дети:</label>
-            <button type="button">-</button>
-            <input id="kids" type="number" value="0">
-            <button type="button">+</button>
-          </p>
-          <button type="submit">Найти</button>
-        </fieldset>
+        <p>
+          <label for="check-in-date">Дата заезда:</label>
+          <input id="check-in-date" type="date" value="2017-04-24">
+          <button type="button" class="calendar-icon"></button>
+        </p>
+        <p>
+          <label for="check-out-date">Дата выезда:</label>
+          <input id="check-out-date" type="date" value="2017-06-04">
+          <button type="button" class="calendar-icon"></button>
+        </p>
+        <p>
+          <label for="adults">Взрослые:</label>
+          <button type="button">Меньше</button>
+          <input id="adults" type="number" value="2">
+          <button type="button">Больше</button>
+        </p>
+        <p>
+          <label for="kids">Дети:</label>
+          <button type="button">Меньше</button>
+          <input id="kids" type="number" value="0">
+          <button type="button">Больше</button>
+        </p>
+        <button type="submit">Найти</button>
       </form>
     </section>
 
