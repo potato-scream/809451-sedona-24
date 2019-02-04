@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Седона</title>
+    <title>Седона каталог</title>
 </head>
 
 <body>
@@ -26,17 +26,17 @@
 
         <section class="catalog-search">
             <!-- Фильтры поиска -->
-            <form action="#" method="GET" class="search-filters" name="filters">
+            <form action="https://echo.htmlacademy.ru" method="GET" class="search-filters" name="filters">
                 <fieldset class="filter-infrastructure">
                     <legend class="filter-infrastructure-title">Инфраструктура:</legend>
                     <input id="pool-checkbox" type="checkbox" checked name="pool">
                     <label for="pool-checkbox">Бассейн</label>
                     <input id="parking-checkbox" type="checkbox" name="parking">
                     <label for="parking-checkbox">Парковка</label>
-                    <input id="wifi-checkbox" type="checkbox"  name="wi-fi">
+                    <input id="wifi-checkbox" type="checkbox" name="wi-fi">
                     <label for="wifi-checkbox">Wi-fi</label>
                 </fieldset>
-                
+
                 <fieldset class="filter-accommodation">
                     <legend class="filter-accommodation-title">Тип жилья:</legend>
                     <input id="hotel-checkbox" type="checkbox" checked name="hotel">
@@ -44,14 +44,26 @@
                     <input id="motel-checkbox" type="checkbox" checked name="motel">
                     <label for="motel-checkbox">Мотель</label>
                     <input id="apartments-checkbox" type="checkbox" checked name="apartments">
-                    <label for="apartments-checkbox">Апартаменты</label> 
+                    <label for="apartments-checkbox">Апартаменты</label>
                 </fieldset>
                 <!-- Тут будет рейндж по стоимости в сутки -->
                 <button type="submit">Показать</button>
             </form>
-            
-            <section class="search-sort">
-                <!-- Тут будет сортировка по цене etc. -->
+
+            <!--  сортировка по цене etc. -->
+            <section class="search-results-sort">
+                <h2 class="visually-hidden">Сортировка результатов поиска</h2>
+                <p class="results-sort-found">Найдено: 3</p>
+                <p class="results-sort-type">Сортировка:</p>
+                <ul class="sort-type-list">
+                    <li class="sort-type-item"><a href="#" class="sort-type-item-selected">По цене</a></li>
+                    <li class="sort-type-item"><a href="#">По типу</a></li>
+                    <li class="sort-type-item"><a href="#">По рейтенгу</a></li>
+                </ul>
+                <ul class="sort-buttons">
+                    <li class="sort-btn sort-low-to-hight"><a href="#">Сортировка по возрастанию</a></li>
+                    <li class="sort-btn sort-hight-to-low"><a href="#">Сортировка по убыванию</a></li>
+                </ul>
             </section>
 
 
@@ -105,9 +117,9 @@
     <footer class="main-footer">
         <p class="social-tag">#Visitsedona</p>
         <ul class="socail-contacts">
-            <li class="social-btn"><a href="#">Твиттер</a></li>
-            <li class="social-btn"><a href="#">Фейсбук</a></li>
-            <li class="social-btn"><a href="#">Ютьюб</a></li>
+            <li class="social-btn"><a href="#">Седона в Твиттере</a></li>
+            <li class="social-btn"><a href="#">Седона в Фейсбуке</a></li>
+            <li class="social-btn"><a href="#">Седона на Ютьюбе</a></li>
         </ul>
         <p class="copyright">
             <span>Website by</span>
@@ -115,4 +127,5 @@
         </p>
     </footer>
 </body>
+
 </html>
