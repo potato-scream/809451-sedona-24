@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Седона</title>
+  <link href="normalize.css" rel="stylesheet">
+  <link href="index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -13,7 +16,7 @@
     </a>
     <nav class="main-navigation">
       <ul class="navigation-list">
-        <li><a href="#">Информация</a></li>
+        <li><a href="#" class="active">Информация</a></li>
         <li><a href="#">Фото и видео</a></li>
         <li><a href="#">Карта штата</a></li>
         <li><a href="#">Гостиницы</a></li>
@@ -22,12 +25,12 @@
   </header>
 
   <main>
-    <!--Background image Welcome Sedona-->
+    <p class="page-top-background"></p>
     <h1 class="visually-hidden">Седона</h1>
     <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
       <b class="promo-heading">Седона — небольшой городок в Аризоне, заслуживающий большего!</b>
-      <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <p class="promo-content">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
 
       <!-- Список приемуществ Седоны -->
       <ol class="advantages-list">
@@ -87,39 +90,40 @@
 
     <section class="search">
       <h2 class="visually-hidden">Поиск гостиницы</h2>
-      <p>Заинтересовались?</p>
-      <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <button type="button">Поиск гостиницы в Седоне</button>
+      <p class="search-title">Заинтересовались?</p>
+      <p class="search-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      <button type="button" class="btn btn-search-open">Поиск гостиницы в Седоне</button>
 
       <!-- Форма поиска гистиницы -->
       <form  action="https://echo.htmlacademy.ru" method="GET" class="search-form" name="search">
-        <p>
+        <p class="form-item">
           <label for="check-in-date">Дата заезда:</label>
-          <input id="check-in-date" type="date" value="2017-04-24">
+          <input id="check-in-date" type="date" value="2017-04-24" name="first-day-date">
           <button type="button" class="calendar-icon">Открыть календарь</button>
         </p>
-        <p>
+        <p class="form-item">
           <label for="check-out-date">Дата выезда:</label>
-          <input id="check-out-date" type="date" value="2017-06-04">
+          <input id="check-out-date" type="date" value="2017-06-04" name="last-day-date">
           <button type="button" class="calendar-icon">Открыть календарь</button>
         </p>
-        <p>
+        <p class="form-item">
           <label for="adults">Взрослые:</label>
           <button type="button">Меньше</button>
-          <input id="adults" type="number" value="2">
+          <input id="adults" type="number" value="2" name="adults-number">
           <button type="button">Больше</button>
         </p>
-        <p>
+        <p class="form-item">
           <label for="kids">Дети:</label>
           <button type="button">Меньше</button>
-          <input id="kids" type="number" value="0">
+          <input id="kids" type="number" value="0" name="kids-number">
           <button type="button">Больше</button>
         </p>
-        <button type="submit">Найти</button>
+        <button class="btn search-btn" type="submit">Найти</button>
       </form>
     </section>
 
     <section class="map">
+      <h2 class="visually-hidden">Карта Седоны</h2>
       <img src="img/map.jpg" width="1200" height="473" alt="Карта Седоны">
     </section>
   </main>
