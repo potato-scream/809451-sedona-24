@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Седона каталог</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -16,12 +19,12 @@
                 <li><a href="#">Информация</a></li>
                 <li><a href="#">Фото и видео</a></li>
                 <li><a href="#">Карта штата</a></li>
-                <li><a href="#">Гостиницы</a></li>
+                <li><a href="#" class="active">Гостиницы</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="catalog">
+    <main class="inner-page">
         <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
 
          <!-- Фильтры поиска -->
@@ -48,7 +51,7 @@
                     <label for="apartments-checkbox">Апартаменты</label>
                 </fieldset>
                 <!-- Тут будет рейндж по стоимости в сутки -->
-                <button type="submit">Показать</button>
+                <button type="submit" class="btn filter-btn">Показать</button>
             </form>
 
             <!--  сортировка по цене etc. -->
