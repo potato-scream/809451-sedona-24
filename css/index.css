@@ -196,13 +196,12 @@ a.active {
 .form-item input:hover {
     font: inherit;
     background-color: #ebebeb;
-    border: 0;
 }
 
 .form-item input:focus {
     font: inherit;
     background-color: #ffffff;
-    border: 2px solid #e5e5e5;
+    outline: 2px solid #e5e5e5;
 }
 
 .search-btn {
