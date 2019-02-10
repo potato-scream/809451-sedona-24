@@ -403,11 +403,31 @@ a.active {
 
 /* СТИЛИ ВНУТРЕННЕЙ СТРАНИЦЫ */
 
+
 .catalog-search form {
     background-color: #728aa0;
     background-image: url("../img/filter-background.jpg");
     background-repeat: no-repeat;
+    padding: 28px 72px;
+    display: flex;
+    min-height: 217px;
 }
+
+.filter-column {
+    width: 554px;
+    display: flex;
+}
+
+.filter-infrastructure {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+
+.filter-infrastructure-item {
+    margin: 0;
+}
+
 
 .catalog-search fieldset {
     padding: 0;
@@ -425,6 +445,20 @@ a.active {
     color: #ffffff;
 }
 
+.filter-accommodation {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+
+.filter-accommodation-item {
+    margin: 0;
+}
+
+.range-column {
+    width: 528px;
+}
+
 .filter-btn {
     border: 2px solid #ffffff;
     font-weight: normal;
@@ -439,6 +473,14 @@ a.active {
     background-color: #ffffff;
 }
 
+.search-results-sort {
+    display: flex;
+    padding-top: 31px;
+    padding-bottom: 30px;
+    padding-left: 72px;
+    padding-right: 72px;
+}
+
 .results-sort-found {
     margin: 0;
     font-weight: bold;
@@ -449,6 +491,7 @@ a.active {
 
 .results-sort-type {
     margin: 0;
+    margin-left: 50px;
     font-size: 12px;
     line-height: 18px;
 }
@@ -457,6 +500,7 @@ a.active {
     padding: 0;
     margin: 0;
     list-style: none;
+    display: flex;
 }
 
 .sort-type-item a {
@@ -481,10 +525,40 @@ a.active {
     color: #81b3d2;
 }
 
+.sort-buttons {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
 .search-results {
     padding: 0;
     margin: 0;
     list-style: none;
+}
+
+.search-results-item {
+    padding: 29px 72px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.results-item-card {
+    display: flex;
+}
+
+.item-card-column {
+    width: 528px;
+    display: flex;
+
+}
+
+.item-card-inner-wrapper {
+    
+    width: 258px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
 }
 
 .item-card-title {
@@ -492,6 +566,7 @@ a.active {
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
+    width: 100%;
 }
 
 .item-card-title:hover {
@@ -502,6 +577,10 @@ a.active {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.item-card-cost {
+    margin-left: 40px;
+}
+
 .card-detail-btn { 
     font-weight: bold;
     font-size: 14px;
@@ -509,12 +588,15 @@ a.active {
     text-decoration: none;
     color: #ffffff;
     background-color: #81b3d2;
+    width: 110px;
+    vertical-align: middle;
+    
 }
 
 .card-detail-btn:hover {
     background-color: #669ec0;
 }
-.card-detail-btn:active {;
+.card-detail-btn:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;
 }
@@ -527,6 +609,8 @@ a.active {
     text-decoration: none;
     color: #ffffff;
     background-color: #766357; 
+    width: 142px;
+    margin-left: 6px;
 }
 
 .card-book-btn:hover {
@@ -535,6 +619,10 @@ a.active {
 .card-book-btn:active {
     color: rgba(255, 255, 255, 0.3);
     background-color: #503e33;
+}
+
+.results-item-rating {
+    width: 528px;
 }
 
 .item-rating-stars {
