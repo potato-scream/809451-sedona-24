@@ -14,6 +14,7 @@ body {
     line-height: 21px;
     text-transform: uppercase;
     color: #000000;
+    background-color: #f2f2f2;
 }
 
 .visually-hidden {
@@ -27,12 +28,14 @@ body {
 .layout {
     width: 1200px;
     margin: 0 auto;
+    box-shadow: 0px 5px 15px 0 rgba(0, 1, 1, 0.25);
 }
 
 .main-header { 
     display: flex;
     flex-direction: row;
     position: relative;
+    background-color: #ffffff;
 }
 
 .main-header .logo {
@@ -40,56 +43,40 @@ body {
     position: absolute;
     top: 0;
     left: 530px;
+    z-index: 10;
 }
 
 
 .navigation-list {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     padding: 0;
     margin: 0;
     justify-content: space-between;
     list-style: none;
 }
 
-.navigation-list li {
-    width: 239px;
+.navigation-list li:empty {
+    width: 240px;
     padding-top: 15px;
-    padding-bottom: 15px;
-    text-align: center;
+    padding-bottom: 15px; 
 }
-
-.navigation-list li:nth-child(1) {
-    padding-right: 74px;
-    padding-left: 72px;
-}
-
-.navigation-list li:nth-child(2) {
-    padding-right: 68px;
-    padding-left: 73px;
-}
-
-.navigation-list li:nth-child(3) {
-    width: 244px;
-}
-
-.navigation-list li:nth-child(4) {
-    padding-right: 73px;
-    padding-left: 76px;
-}
-
-.navigation-list li:nth-child(5) {
-    padding-right: 72px;
-    padding-left: 88px;
-} 
 
 .navigation-list a {
+    display: block;
+    width: 240px;
+    padding-top: 16px;
+    padding-bottom: 15px;
     font-weight: bold;
     font-size: 14px;
     line-height: 26px;
+    text-align: center;
+    text-align: center;
     text-decoration: none;
     color: #000000;
 }
+
 
 .navigation-list a:hover {
     color: #81b3d2;
@@ -106,9 +93,25 @@ a.active {
 .page-top-background {
     height: 508px;
     margin: 0;
+    position: relative;
     background:
     url("../img/intro-mask.svg") no-repeat 50% 451px,
-    url("../img/background_big.jpg") no-repeat 50% -57px;
+    url("../img/background_big.jpg") no-repeat 50% -56px;
+}
+
+.page-top-background::after {
+    width: 459px;
+    height: 353px;
+    position: absolute;
+    top: 76px;
+    left: 371px;
+    background: url("../img/intro-welcome.svg") no-repeat;
+    content: "";
+
+}
+
+.advantages {
+    background-color: #ffffff;  
 }
 
 .promo-container {
@@ -177,9 +180,51 @@ a.active {
 
 .item-content-number {
     display: block;
-    padding-right: 130px;
-    padding-left: 130px; 
     margin-top: 23px;
+    position: relative;
+    text-align: center;
+}
+
+.item-content-number::before {
+    width: 9px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 115px;
+    background-color: #bcd6e7;
+    content: "";
+}
+
+.advantages-list-item:nth-child(3) .item-content-number::before {
+    background-color: #979797; 
+}
+.advantages-list-item:nth-child(4) .item-content-number::before {
+    background-color: #979797; 
+}
+.advantages-list-item:nth-child(5) .item-content-number::before {
+    background-color: #979797; 
+}
+
+.item-content-number::after {
+    width: 9px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 156px;
+    background-color: #bcd6e7;
+    content: "";
+}
+
+.advantages-list-item:nth-child(3) .item-content-number::after {
+    background-color: #979797; 
+}
+
+.advantages-list-item:nth-child(4) .item-content-number::after {
+    background-color: #979797; 
+}
+
+.advantages-list-item:nth-child(5) .item-content-number::after {
+    background-color: #979797; 
 }
 
 .advantages-list-item:first-child .list-item-content, 
@@ -212,6 +257,8 @@ a.active {
     color: #333333;
 }
 
+
+
 .advantages-description-list {
     display: flex;
     padding: 0;
@@ -221,7 +268,7 @@ a.active {
 
 .description-list-item {
     width: 400px;
-    padding-top: 162px;
+    padding-top: 161px;
     padding-right: 60px;
     padding-bottom: 82px;
     padding-left: 57px;
@@ -235,6 +282,48 @@ a.active {
     line-height: 21px;
     text-align: center;
     color: #000000;
+}
+
+.list-item-accommodation {
+    position: relative;
+}
+
+.description-list-item .list-item-accommodation::before {
+    width: 75px;
+    height: 72px;
+    position: absolute;
+    top: -102px;
+    left: 105px;
+    background: url("../img/icon-1.svg") no-repeat;
+    content: "";    
+}
+
+.list-item-food {
+    position: relative;
+}
+
+.description-list-item .list-item-food::before {
+    width: 74px;
+    height: 70px;
+    position: absolute;
+    top: -101px;
+    left: 104px;
+    background: url("../img/icon-3.svg") no-repeat;
+    content: "";  
+}
+
+.list-item-souvenirs {
+    position: relative;
+}
+
+.list-item-souvenirs::before {
+    width: 64px;
+    height: 76px;
+    position: absolute;
+    top: -106px;
+    left: 111px;
+    background: url("../img/icon-2.svg") no-repeat;
+    content: "";
 }
 
 .description-list-item p {
@@ -258,7 +347,9 @@ a.active {
 
 
 .search {
-    margin-top: 52px;
+    padding-top: 52px;
+    position: relative;
+    background-color: #ffffff;
 }
 
 .search-title {
@@ -296,10 +387,11 @@ a.active {
     display: block;
     width: 568px;
     height: 86px;
-    padding-top: 31px;
+    padding-top: 32px;
     padding-bottom: 33px;
     margin: 0 auto;
     margin-top: 45px;
+    border: 0;
 }
 
 .btn-search-open:hover {
@@ -312,14 +404,22 @@ a.active {
 }
 
 .search form {
+    display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     width: 568px;
     padding: 55px;
-    padding-top: 57px;
+    padding-top: 56px;
     margin: 0 auto;
+    position: absolute;
+    left: 315px;
+    box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+    background-color: #ffffff;
+    
 }
 
 .form-item {
+    width: 100%;
     margin: 0;
     margin-bottom: 29px;
     font-weight: bold;
@@ -328,10 +428,47 @@ a.active {
     color: #000000;
 }
 
+.form-item:nth-child(3) {
+   width: 50%;
+}
+
+.form-item:nth-child(3) label {
+    margin-right: 37px;
+}
+
+.form-item:nth-child(4) {
+    width: 50%;
+}
+
+.form-item:nth-child(4) label {
+    margin-right: 22px;
+    margin-left: 51px;
+}
+
+.form-item label {
+    display: inline-block;
+    margin-right: 16px;
+    vertical-align: middle;
+}
+
+.form-item:nth-child(1) label {
+    margin-right: 20px;
+
+}
+
 .form-item input {
+    padding-top: 8px;
+    padding-bottom: 6px;
+    padding-left: 14px;
     border: 0; 
     font: inherit;
     background-color: #f2f2f2;
+
+}
+
+.form-item input[type="number"] {
+    width: 114px;
+    text-align: center;
 }
 
 .form-item input:nth-child(-n+2) {
@@ -353,7 +490,8 @@ a.active {
 .search-btn {
     width: 458px;
     height: 58px;
-    margin-top: 55px;
+    margin-top: 24px;
+    border: 0;
     background-color: #81b3d2;
 }
 
@@ -366,14 +504,23 @@ a.active {
     background-color: #5496bd;
 }
 
+.map img {
+display: block;
+}
+
 .main-footer {
     display: flex;
+    padding-bottom: 34px;
+    margin-top: -119px;
     justify-content: space-between;
+    position: relative;  
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .social-tag {
     width: 400px;
     margin: 0;
+    margin-top: 47px;
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
@@ -382,22 +529,60 @@ a.active {
 }
 
 .socail-contacts {
-    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
     padding: 0;
     margin: 0;
-    text-align: center;
+    margin-top: 36px;
+    justify-content: space-between;
     list-style: none;
 }
 
+.social-btn { 
+    display: flex;
+    width: 46px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    background-color: #81b3d2;
+}
+
+.social-btn:hover,
+.social-btn:active {
+    background-color: #669ec0;
+}
+
+.social-btn:active path {
+   fill: #88b6d1;
+}
+
 .copyright {
+    display: flex;
     width: 400px;
     margin: 0;
     text-align: center;
 }
+
+.copyright-logo {
+    margin-top: 39px;
+    margin-left: 8px;
+}
+
+.copyright-logo:hover path {
+    fill: #81b3d2;
+}
+
+.copyright-logo:active path {
+    fill: #bdbbbc;
+}
+
 .copyright span {
+    padding-left: 103px;
+    margin-top: 47px;
     font-size: 14px;
     line-height: 26px;
-    color: #000000;
+    color: #000000; 
 }
 
 
@@ -405,17 +590,18 @@ a.active {
 
 
 .catalog-search form {
+    display: flex;
+    min-height: 217px;
+    padding: 28px 72px;
     background-color: #728aa0;
     background-image: url("../img/filter-background.jpg");
     background-repeat: no-repeat;
-    padding: 28px 72px;
-    display: flex;
-    min-height: 217px;
+
 }
 
 .filter-column {
-    width: 554px;
     display: flex;
+    width: 554px;
 }
 
 .filter-infrastructure {
@@ -476,9 +662,10 @@ a.active {
 .search-results-sort {
     display: flex;
     padding-top: 31px;
+    padding-right: 72px;
     padding-bottom: 30px;
     padding-left: 72px;
-    padding-right: 72px;
+    background-color: #ffffff;
 }
 
 .results-sort-found {
@@ -497,10 +684,10 @@ a.active {
 }
 
 .sort-type-list {
+    display: flex;
     padding: 0;
     margin: 0;
     list-style: none;
-    display: flex;
 }
 
 .sort-type-item a {
@@ -526,15 +713,16 @@ a.active {
 }
 
 .sort-buttons {
-    margin: 0;
-    padding: 0;
     display: flex;
+    padding: 0;
+    margin: 0;
 }
 
 .search-results {
     padding: 0;
     margin: 0;
     list-style: none;
+    background-color: #ffffff;
 }
 
 .search-results-item {
@@ -548,25 +736,25 @@ a.active {
 }
 
 .item-card-column {
-    width: 528px;
     display: flex;
+    width: 528px;
 
 }
 
 .item-card-inner-wrapper {
-    
-    width: 258px;
     display: flex;
     flex-wrap: wrap;
+    
+    width: 258px;
     margin-left: 30px;
 }
 
 .item-card-title {
+    width: 100%;
     margin: 0; 
     font-weight: bold;
     font-size: 21px;
     line-height: 26px;
-    width: 100%;
 }
 
 .item-card-title:hover {
@@ -581,15 +769,15 @@ a.active {
     margin-left: 40px;
 }
 
-.card-detail-btn { 
+.card-detail-btn {
+    width: 110px; 
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
     text-decoration: none;
+    vertical-align: middle;
     color: #ffffff;
     background-color: #81b3d2;
-    width: 110px;
-    vertical-align: middle;
     
 }
 
@@ -603,14 +791,14 @@ a.active {
 
 
 .card-book-btn { 
+    width: 142px;
+    margin-left: 6px; 
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
     text-decoration: none;
     color: #ffffff;
-    background-color: #766357; 
-    width: 142px;
-    margin-left: 6px;
+    background-color: #766357;
 }
 
 .card-book-btn:hover {
@@ -633,4 +821,9 @@ a.active {
     margin: 0;
     color: #666666;
     background-color: #f2f2f2;
+}
+
+
+footer .inner-footer {
+    background-color:; 
 }
