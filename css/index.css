@@ -428,19 +428,23 @@ a.active {
 
 .form-item:nth-child(3) {
    width: 50%;
+   display: flex;
 }
 
 .form-item:nth-child(3) label {
-    margin-right: 37px;
+    margin-right: 42px;
+    align-self: center;
 }
 
 .form-item:nth-child(4) {
     width: 50%;
+    display: flex;
 }
 
 .form-item:nth-child(4) label {
-    margin-right: 22px;
+    margin-right: 28px;
     margin-left: 51px;
+    align-self: center;
 }
 
 .form-item label {
@@ -465,13 +469,39 @@ a.active {
 }
 
 .form-item input[type="number"] {
-    width: 114px;
+    width: 38px;
+    height: 38px;
     text-align: center;
 }
 
 .form-item input:nth-child(-n+2) {
     width: 346px;
     height: 38px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.calendar-icon-image {
+    position: absolute;
+    content: "";
+    top: 64px;
+    left: 484px;
+    cursor: pointer;
+}
+
+.form-item:nth-child(2) .calendar-icon-image {
+    position: absolute;
+    content: "";
+    top: 131px;
+    left: 484px;
+}
+
+.calendar-icon-image:hover path {
+     fill: #000000;
+}
+
+.calendar-icon-image:active path {
+    fill: #81b3d2;
 }
 
 .form-item input:hover {
@@ -483,6 +513,70 @@ a.active {
     outline: 2px solid #e5e5e5;
     font: inherit;
     background-color: #ffffff;
+}
+
+.minus-btn {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    background-color: #f2f2f2;
+    padding: 0;
+    position: relative;
+}
+
+.minus-btn::before {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 3px;
+    background-color: #a9a9a9;
+    left: 13px;
+}
+
+.minus-btn:hover::before {
+    background-color: #000000;
+}
+
+.minus-btn:active::before {
+    background-color: #81b3d2;
+}
+
+.plus-btn {
+    width: 38px;
+    height: 38px;
+    border: 0;
+    background-color: #f2f2f2; 
+    padding: 0;
+    position: relative;
+}
+
+.plus-btn::before {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 3px;
+    background-color: #a9a9a9;
+    left: 13px;
+}
+
+.plus-btn::after {
+    position: absolute;
+    content: "";
+    width: 11px;
+    height: 3px;
+    background-color: #a9a9a9;
+    left: 13px;
+    transform: rotate(90deg);
+}
+
+.plus-btn:hover::before,
+.plus-btn:hover::after {
+    background-color: #000000;
+}
+
+.plus-btn:active::before,
+.plus-btn:active::after {
+    background-color: #81b3d2;
 }
 
 .search-btn {
