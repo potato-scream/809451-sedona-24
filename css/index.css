@@ -129,9 +129,11 @@ body {
     height: 508px;
     margin: 0;
     position: relative;
+    background-color: #658cb2;
     background:
     url("../img/intro-mask.svg") no-repeat 50% 451px,
     url("../img/background_big.jpg") no-repeat 50% -56px;
+
 }
 
 .page-top-background::after {
@@ -155,6 +157,7 @@ body {
 }
 .promo-heading {
     display: inline-block;
+    vertical-align: top;
     margin-top: 61px;
     font-weight: bold;
     font-size: 21px;
@@ -491,6 +494,8 @@ body {
     font-size: 14px;
     line-height: 26px;
     color: #000000;
+    position: relative;
+    display: flex;
 }
 
 .form-item:nth-child(3) {
@@ -500,11 +505,24 @@ body {
    display: flex;
 }
 
+
+
+.form-item:nth-child(1) label {
+    margin-right: 24px;
+    margin-top: 6px;
+}
+
+.form-item:nth-child(2) label {
+    margin-right: 22px;
+    margin-top: 6px;
+}
+
 .form-item:nth-child(3) label {
-    margin-right: 42px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
+        margin-right: 41px;
+        
 }
 
 .form-item:nth-child(4) {
@@ -515,28 +533,19 @@ body {
 }
 
 .form-item:nth-child(4) label {
-    margin-right: 28px;
-    margin-left: 51px;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
-}
-
-.form-item label {
-    display: inline-block;
-    margin-right: 16px;
-    vertical-align: middle;
-}
-
-.form-item:nth-child(1) label {
-    margin-right: 20px;
+        margin-left: 51px;
+        margin-right: 26px;
 }
 
 
 .form-item input {
     padding-top: 5px;
     padding-bottom: 6px;
-    padding-left: 14px;
+    padding-left: 11px;
+    
     border: 0; 
     font: inherit;
     background-color: #f2f2f2;
@@ -557,32 +566,35 @@ body {
 
 
 .form-item input:nth-child(-n+2) {
-    width: 346px;
     height: 38px;
     text-transform: uppercase;
-    position: relative;
+    flex-grow: 1;
+    padding-right: 31px;
 }
 
-.calendar-icon-image {
+.calendar-icon-btn {
     position: absolute;
     content: "";
-    top: 64px;
-    left: 484px;
     cursor: pointer;
+    border: none;
+    width: 27px;
+    height: 29px;
+    left: 421px;
+    top: 5px;
+    background-color: transparent;
 }
 
-.form-item:nth-child(2) .calendar-icon-image {
+.form-item:nth-child(2) .calendar-icon-btn {
     position: absolute;
     content: "";
-    top: 131px;
-    left: 484px;
+    background-color: transparent;
 }
 
-.calendar-icon-image:hover path {
+.calendar-icon-btn:hover path {
      fill: #000000;
 }
 
-.calendar-icon-image:active path {
+.calendar-icon-btn:active path {
     fill: #81b3d2;
 }
 
@@ -604,24 +616,17 @@ body {
     background-color: #f2f2f2;
     padding: 0;
     position: relative;
+    padding-top: 3px;
 }
 
-.minus-btn::before {
-    position: absolute;
-    content: "";
-    width: 11px;
-    height: 3px;
-    background-color: #a9a9a9;
-    left: 13px;
+.minus-btn:hover path {
+    fill: #000000;
 }
 
-.minus-btn:hover::before {
-    background-color: #000000;
+.minus-btn:active path {
+    fill: #81b3d2;
 }
 
-.minus-btn:active::before {
-    background-color: #81b3d2;
-}
 
 .plus-btn {
     width: 38px;
@@ -630,37 +635,15 @@ body {
     background-color: #f2f2f2; 
     padding: 0;
     position: relative;
+    padding-top: 3px;
 }
 
-.plus-btn::before {
-    position: absolute;
-    content: "";
-    width: 11px;
-    height: 3px;
-    background-color: #a9a9a9;
-    left: 13px;
+.plus-btn:hover path {
+    fill: #000000;
 }
 
-.plus-btn::after {
-    position: absolute;
-    content: "";
-    width: 11px;
-    height: 3px;
-    background-color: #a9a9a9;
-    left: 13px;
-    -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-}
-
-.plus-btn:hover::before,
-.plus-btn:hover::after {
-    background-color: #000000;
-}
-
-.plus-btn:active::before,
-.plus-btn:active::after {
-    background-color: #81b3d2;
+.plus-btn:active path {
+    fill: #81b3d2;
 }
 
 .search-btn {
@@ -678,6 +661,10 @@ body {
 .search-btn:active { 
     color: rgba(255, 255, 255, 0.3);
     background-color: #5496bd;
+}
+
+.map {
+    background-color: #dce5c7;
 }
 
 .map img {
@@ -747,7 +734,7 @@ footer.main-footer {
         -ms-flex-align: center;
             align-items: center;
     background-color: #81b3d2;
-    padding-top: 4px;
+    padding-top: 2px;
 }
 
 .social-btn:hover,
@@ -856,12 +843,11 @@ footer.main-footer {
 
 
 .filter-checkbox:focus + label::before {
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 5px auto;
 }
 
 .filter-checkbox:focus:checked + label::before {
-    outline: 5px auto -webkit-focus-ring-color;
-    outline: thin dotted;
+    outline: 5px auto;
 }
 
 .filter-checkbox:disabled + label::before {
@@ -1056,7 +1042,8 @@ footer.main-footer {
 
 
 .filter-btn {
-    width: 137px;
+    padding-left: 35px;
+    padding-right: 33px;
     padding-top: 6px;
     padding-bottom: 5px;
     margin-top: 19px;
@@ -1156,7 +1143,7 @@ footer.main-footer {
     display: flex;
     padding: 0;
     margin: 0;
-    margin-left: 503px;
+    margin-left: auto;
     list-style: none;   
 }
 
@@ -1261,7 +1248,8 @@ footer.main-footer {
 }
 
 .card-detail-btn {
-    width: 110px;
+    padding-right: 17px;
+    padding-left: 17px;
     padding-top: 3px;
     padding-bottom: 3px;
     margin-top: 14px; 
@@ -1285,11 +1273,12 @@ footer.main-footer {
 
 
 .card-book-btn { 
-    width: 142px;
     padding-top: 3px;
     padding-bottom: 3px;
+    padding-left: 17px;
+    padding-right: 17px;
     margin-top: 14px;
-    margin-left: 6px; 
+    margin-left: 5px; 
     font-weight: bold;
     font-size: 14px;
     line-height: 21px;
