@@ -467,7 +467,10 @@ body {
 }
 
 .form-wrapper {
+    width: 100%;
+    min-height: 539px;
     overflow: hidden;
+    position: absolute;
 }
 
 .search-form {
@@ -484,16 +487,81 @@ body {
     left: 50%;
     -webkit-box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
             box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-    background-color: #ffffff;   
+    background-color: #ffffff;  
+    
 }
-/* Анимация */
+
+
+@-webkit-keyframes slide-down {
+    0% {
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%); 
+    }
+    100% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+  }
+
 
 @keyframes slide-down {
     0% {
-        transform: translateY(-100%); 
+        -webkit-transform: translateY(-100%);
+                transform: translateY(-100%); 
     }
     100% {
-        transform: translateY(0);
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+    }
+  }
+
+  @-webkit-keyframes shake {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
     }
   }
 
@@ -501,7 +569,13 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    animation: slide-down 1s;
+    -webkit-animation: slide-down 1s;
+            animation: slide-down 1s;
+}
+
+.form-error { 
+    -webkit-animation: shake 0.6s; 
+            animation: shake 0.6s;
 }
 
 .form-item {
@@ -685,13 +759,14 @@ body {
     background-color: #5496bd;
 }
 
-.map {
-    background-color: #dce5c7;
+
+.map  {
+    min-height: 593px;
+    background-image: url(../img/map.jpg);
+    background-repeat: no-repeat;
 }
 
-.map img {
-display: block;
-}
+
 
 footer.main-footer {
     display: -webkit-box;
@@ -741,7 +816,10 @@ footer.main-footer {
 
 .socail-contacts li:nth-child(3n) {
     margin-right: 0;
+    margin-bottom: 5px;
 }
+
+
 
 .social-btn { 
     display: -webkit-box; 
@@ -798,8 +876,6 @@ footer.main-footer {
     color: #000000; 
 }
 
-
-/* СТИЛИ ВНУТРЕННЕЙ СТРАНИЦЫ */
 
 
 .catalog-search form {
@@ -1225,8 +1301,6 @@ footer.main-footer {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    
-    width: 258px;
     margin-top: 21px;
     margin-left: 30px;
 }
@@ -1252,9 +1326,16 @@ footer.main-footer {
     color: rgba(0, 0, 0, 0.3);
 }
 
+.card-accomodation-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
 .item-card-type {
     margin-top: 6px;
 }
+
 
 .item-card-cost {
     margin-top: 6px;
@@ -1267,6 +1348,12 @@ footer.main-footer {
 
 .search-results-item:nth-child(3) .item-card-cost {
     margin-left: 21px;
+}
+
+.card-btns-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
 }
 
 .card-detail-btn {
@@ -1365,4 +1452,3 @@ footer.inner-footer {
     position: static;
     background-color: #ffffff;
 }
-

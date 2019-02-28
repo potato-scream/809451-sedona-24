@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Седона каталог</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/index.css" rel="stylesheet">
+    <link href="css/index.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
 </head>
 
@@ -29,7 +29,6 @@
         <main class="inner-page">
             <h1 class="visually-hidden">Поиск гостиницы в Седоне</h1>
 
-            <!-- Фильтры поиска -->
             <section class="catalog-search">
                 <h2 class="visually-hidden">Параметры поиска гостиницы</h2>
                 <form action="https://echo.htmlacademy.ru" method="GET" class="search-filters" name="filters">
@@ -70,7 +69,7 @@
                             </ul>
                         </fieldset>
                     </div>
-                    <!-- Тут будет рейндж по стоимости в сутки -->
+
                     <div class="filter-range">
                         <div class="range-title">Стоимость в сутки (Р):</div>
                         <div class="prise-controls">
@@ -88,7 +87,6 @@
                     </div>
                 </form>
 
-                <!--  сортировка по цене etc. -->
                 <section class="search-results-sort">
                     <h2 class="visually-hidden">Сортировка результатов поиска</h2>
                     <p class="results-sort-found">Найдено: 3</p>
@@ -123,10 +121,14 @@
                                 <img src="img/amara-resort.jpg" width="135" height="90" alt="Отель Amara Resort & Spa">
                                 <div class="item-card-inner-wrapper">
                                     <h3 class="item-card-title">Amara Resort & Spa</h3>
-                                    <span class="item-card-type">Гостиница</span>
-                                    <span class="item-card-cost">От 4000 Р.</span>
-                                    <a href="#" class="btn card-detail-btn">Подробнее</a>
-                                    <a href="#" class="btn card-book-btn">Забронировать</a>
+                                    <div class="card-accomodation-wrapper">
+                                        <span class="item-card-type">Гостиница</span>
+                                        <span class="item-card-cost">От 4000 Р.</span>
+                                    </div>
+                                    <div class="card-btns-wrapper">
+                                        <a href="#" class="btn card-detail-btn">Подробнее</a>
+                                        <a href="#" class="btn card-book-btn">Забронировать</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="results-item-rating">
@@ -146,10 +148,14 @@
                                 <img src="img/desert-quail.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
                                 <div class="item-card-inner-wrapper">
                                     <h3 class="item-card-title">Desert Quail Inn</h3>
-                                    <span class="item-card-type">Мотель</span>
-                                    <span class="item-card-cost">От 3000 Р.</span>
-                                    <a href="#" class="btn card-detail-btn">Подробнее</a>
-                                    <a href="#" class="btn card-book-btn">Забронировать</a>
+                                    <div class="card-accomodation-wrapper">
+                                        <span class="item-card-type">Мотель</span>
+                                        <span class="item-card-cost">От 3000 Р.</span>
+                                    </div>
+                                    <div class="card-btns-wrapper">
+                                        <a href="#" class="btn card-detail-btn">Подробнее</a>
+                                         <a href="#" class="btn card-book-btn">Забронировать</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="results-item-rating">
@@ -168,10 +174,14 @@
                                 <img src="img/villas.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
                                 <div class="item-card-inner-wrapper">
                                     <h3 class="item-card-title">Villas at Poco Diablo</h3>
-                                    <span class="item-card-type">Апартаменты</span>
-                                    <span class="item-card-cost">От 2000 Р.</span>
-                                    <a href="#" class="btn card-detail-btn">Подробнее</a>
-                                    <a href="#" class="btn card-book-btn">Забронировать</a>
+                                    <div class="card-accomodation-wrapper">
+                                        <span class="item-card-type">Апартаменты</span>
+                                        <span class="item-card-cost">От 2000 Р.</span>
+                                    </div>
+                                    <div class="card-btns-wrapper">
+                                        <a href="#" class="btn card-detail-btn">Подробнее</a>
+                                        <a href="#" class="btn card-book-btn">Забронировать</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="results-item-rating">
