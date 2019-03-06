@@ -26,7 +26,6 @@ var btn = document.querySelector('.btn-search-open');
       form.classList.toggle('form-visible');
       form.classList.remove('form-error');
     
-    
       if (firstDayStorage) {
         firstDay.value = firstDayStorage;
       }
@@ -60,7 +59,7 @@ var btn = document.querySelector('.btn-search-open');
     form.addEventListener('submit', function (evt) {
       if (!firstDay.value || !lastDay.value || !adults.value || !kids.value) {
      evt.preventDefault();
-     form.classList.remove("form-error");
+     form.classList.remove('form-error');
     form.offsetWidth = form.offsetWidth;
      form.classList.add('form-error');
       } else {
